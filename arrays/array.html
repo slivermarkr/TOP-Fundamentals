@@ -2,22 +2,17 @@
 <html>
 <body>
 <h1>JavaScript Arrays</h1>
+<h2>Creating an Array</h2>
 
-<p>Adding elements with high indexes can create undefined "holes" in an array.</p>
+<p>Avoid using new Array(). Use [] instead.</p>
 
 <p id="demo"></p>
 
 <script>
-const fruits = ["Banana", "Orange", "Apple"];
-fruits[6] = "Lemon";
-
-let fLen = fruits.length;
-let text = "";
-for (i = 0; i < fLen; i++) {
-  text += fruits[i] + "<br>";
-}
-
-document.getElementById("demo").innerHTML = text;
+//const points = new Array(40, 100, 1, 5, 25, 10);
+const fruits = ["Banana", "Orange", "Apple"]
+document.getElementById("demo").innerHTML = 
+fruits instanceof Array;
 </script>
 
 </body>
