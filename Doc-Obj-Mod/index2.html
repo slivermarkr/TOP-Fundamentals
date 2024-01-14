@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alertFunction()">Click me</button>
+    <button id="btn">Click Me</button>
+    
+    <script>
+        const btn = document.querySelector("#btn");
+        btn.addEventListener("click", alertFunction)    
+
+        function alertFunction(){
+            alert("YAY! YOU DID IT!");
+        }
+        btn.addEventListener('click', function (e){
+            e.target.style.background = 'blue';
+            e.target.style.color = 'white';
+        })
+    </script>
+</body>
+</html>

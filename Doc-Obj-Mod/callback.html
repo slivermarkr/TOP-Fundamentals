@@ -1,0 +1,13 @@
+<script>
+    function myForEach(array, callback){
+        for(let i = 0; i < array.length;i++){
+            callback(array[i]);
+        }
+    }
+    const myArray = [2, 3, 4, 2];
+
+    myForEach(myArray,(item) => {
+        console.log(item ** 2);
+    })
+
+</script>
