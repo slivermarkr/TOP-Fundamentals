@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mountains</h1>
+
+    <div id="mountains">
+
+    </div>
+    
+    <script>
+        const MOUNTAINS = [
+    {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+    {name: "Everest", height: 8848, place: "Nepal"},
+    {name: "Mount Fuji", height: 3776, place: "Japan"},
+    {name: "Vaalserberg", height: 323, place: "Netherlands"},
+    {name: "Denali", height: 6168, place: "United States"},
+    {name: "Popocatepetl", height: 5465, place: "Mexico"},
+    {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+  ];
+    
+
+    const div = document.querySelector("#mountains");
+
+    const table = document.createElement('table');
+    table.border = "1";
+    const row = document.createElement('tr');
+    table.appendChild(row);
+    const name = document.createElement('th');
+    const height = document.createElement('th');
+    const place = document.createElement('th');
+
+    name.textContent = "Name";
+    row.appendChild(name);
+    height.textContent = "Height";
+    row.appendChild(height);
+    place.textContent = "Place";
+    row.appendChild(place);
+    
+    const mountainData = MOUNTAINS.map(value => {
+        return (
+            `<tr>
+                <td>${value.name}</td>
+                <td>${value.height}</td>
+                <td>${value.place}</td>
+             </tr>
+                
+            `
+        );
+    }).join('');
+    
+    div.appendChild(table);
+    table.innerHTML += mountainData;
+
+    </script>
+</body>
+</html>
