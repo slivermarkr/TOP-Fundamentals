@@ -72,16 +72,27 @@ let box = document.querySelector("#box");
 // box.addEventListener('mouseout',runEvent);
 
 
-let output = document.querySelector(".output");
 
-box.addEventListener('mousemove',runEvent)
+// let xoff = e.offsetX;
+// let yoff = e.offsetY;
+
+// output.innerHTML = `<h3>MouseX: ${xoff} </h3> <h3>MouseY: ${yoff}`; 
+// document.body.style.backgroundColor = `rgb(${xoff},${yoff},40)`;
+
+// let output = document.querySelector(".output");
+
+// box.addEventListener('mousemove',runEvent)
+const input = document.querySelector("input[type='text']");
+const form = document.querySelector('form');
+
+let select = document.querySelector(".select");
+
+form.addEventListener('submit', runEvent);
+
 
 function runEvent(e){
+
+    e.preventDefault();
  console.log(`EVENT TYPE: `+e.type);
-
- let xoff = e.offsetX;
- let yoff = e.offsetY;
-
- output.innerHTML = `<h3>MouseX: ${xoff} </h3> <h3>MouseY: ${yoff}`; 
- box.style.backgroundColor = `rgb(${xoff},${yoff},40)`;
+ 
 }
