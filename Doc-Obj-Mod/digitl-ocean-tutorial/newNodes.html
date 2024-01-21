@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning the DOM</title>
+    </head>
+
+    <body>
+        <h1>Document Object Model</h1>
+    </body>
+    <script>
+        const paragraph = document.createElement('p');
+        console.log(paragraph);
+        
+        paragraph.textContent = "I'm a brandnew paragraph"
+        console.log(paragraph);
+
+        paragraph.innerHTML = "I'm a paragraph with <strong>bold</strong>.";
+        console.log(paragraph);
+
+        const text = document.createTextNode("I'm a new text node");
+        console.log(text);
+    </script>
+</html>
