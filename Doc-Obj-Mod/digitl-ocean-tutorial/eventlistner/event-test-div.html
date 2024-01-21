@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Div</title>
+    </head>
+    
+    <body>
+        <section>
+            <div id="one">One</div>
+            <div id="two">Two</div>
+            <div id="three">Three</div>
+        </section>
+
+        <script>
+            const section = document.querySelector('section');
+
+            section.addEventListener('click',evet => {
+                console.log(event.target);
+            })
+        </script>
+    </body>
+</html>
