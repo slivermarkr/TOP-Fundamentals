@@ -7,27 +7,37 @@
 </head>
 <body>
     <script>
+        // const gimli = {
+        //     name: "Gimli",
+        //     race: "dwarf",
+        //     weapon: "axe",
+        //     greet: function () {
+        //         return `Hi, my name is ${this.name}` 
+        //     },
+        // };
+
+        // gimli.age = 139;
+        // console.log(gimli);
+
+        // gimli.fight = function(){
+        //     return `I will fight with this ${gimli.weapon}`;
+        // }
+
+        // console.log(gimli.fight());
+
+        // gimli.weapon = "battle axe";
+        // delete gimli.weapon;
+        // console.log(gimli.weapon);
+
         const gimli = {
             name: "Gimli",
             race: "dwarf",
-            weapon: "axe",
-            greet: function () {
-                return `Hi, my name is ${this.name}` 
-            },
+            weapon: "battle axe",
         };
 
-        gimli.age = 139;
-        console.log(gimli);
-
-        gimli.fight = function(){
-            return `I will fight with this ${gimli.weapon}`;
+        for(let key in gimli){
+            console.log(key.toUpperCase() + ':',gimli[key]);
         }
-
-        console.log(gimli.fight());
-
-        gimli.weapon = "battle axe";
-        delete gimli.weapon;
-        console.log(gimli.weapon);
     </script>
 </body>
 </html>
