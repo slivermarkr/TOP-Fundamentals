@@ -82,17 +82,4 @@ let box = document.querySelector("#box");
 // let output = document.querySelector(".output");
 
 // box.addEventListener('mousemove',runEvent)
-const input = document.querySelector("input[type='text']");
-const form = document.querySelector('form');
-
-let select = document.querySelector(".select");
-
-form.addEventListener('submit', runEvent);
-
-
-function runEvent(e){
-
-    e.preventDefault();
- console.log(`EVENT TYPE: `+e.type);
- 
-}
+// 
